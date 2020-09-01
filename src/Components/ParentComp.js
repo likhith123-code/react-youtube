@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ChildComp from './ChildComp';
+import Display from './DataDisplay';
 
 class Parent extends Component{
     state={
@@ -12,7 +13,7 @@ class Parent extends Component{
         netflix:{
             names:['Rahasya','Kanulu Kanulu Dochayante','Bheeshma']
         },
-        choice:'none'
+        choice:'none' 
     }
     
     dataHandler = (stream_name)=>{
@@ -25,7 +26,7 @@ class Parent extends Component{
         if(this.state.choice==='amazon'){
             content= (
                 <div>
-                    {this.state.amazon.names.map((name)=><div>{name}</div>)}
+                    {this.state.amazon.names.map((name)=><Display send={name} />)}
                 </div>
                
             )
@@ -34,7 +35,7 @@ class Parent extends Component{
         if(this.state.choice==='netflix'){
             content= (
                 <div>
-                    {this.state.netflix.names.map((name)=><div>{name}</div>)}
+                    {this.state.netflix.names.map((name)=><Display send={name} />)}
                 </div>
                
             )
@@ -43,7 +44,7 @@ class Parent extends Component{
         if(this.state.choice==='hotstar'){
             content= (
                 <div>
-                    {this.state.hotstar.names.map((name)=><div>{name}</div>)}
+                    {this.state.hotstar.names.map((name)=><Display send={name} />)}
                 </div>
                
             )
@@ -55,6 +56,7 @@ class Parent extends Component{
                 <div>
                     {content}
                 </div>
+                <br></br>
                 <div>
                     {/* passing function as the paramater to the child */}
                     <ChildComp 
