@@ -44,14 +44,14 @@ class Parent extends Component{
         if(this.state.choice==='hotstar'){
             content= (
                 <div>
-                    {this.state.hotstar.names.map((name)=><Display send={name} />)}
+                    {this.state.hotstar.names.map((name)=><Display key={name} send={name} />)}
                 </div>
                
             )
 
         }
         return(
-            <div>
+            <React.Fragment>
                 Available Movies : 
                 <div>
                     {content}
@@ -66,7 +66,7 @@ class Parent extends Component{
                 <div>
                     
                 </div>
-            </div>
+            </React.Fragment>
         )
     }
 }
