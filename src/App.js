@@ -9,15 +9,12 @@ import MovieData from './Aadesh/moviedata';
 function App() {
   return ( 
     <div className={classes.mainpage}>
-      <p>Welcome to React Session</p>
+      <p>Welcome StreamIt - online movies Streaming Site</p>
       <br/>
       <div>
       <Parent/>
       </div>
       <br/>
-      <div>
-        <FormComp/>
-      </div>
       <div>
       <MovieData/>
       </div>
