@@ -4,6 +4,7 @@ import Greet from './Components/Greet';
 import Welcome from './Components/Welcome';
 import Parent from './Components/ParentComp';
 import FormComp from './Components/Forms';
+import MovieData from './Aadesh/moviedata';
 
 function App() {
   return ( 
@@ -16,6 +17,9 @@ function App() {
       <br/>
       <div>
         <FormComp/>
+      </div>
+      <div>
+      <MovieData/>
       </div>
     </div>
   );

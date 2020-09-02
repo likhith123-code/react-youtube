@@ -1,6 +1,12 @@
 import React from 'react';
-//  when data is changed in parent only it will render => change should be 
-// shallow change
+/*
+Renders only when there is a strict change in the parent data which has been passed
+here in this component
+or else it renders only once
+This kind of things are used for performance boosting
+This is same as pure component but for functions it is called memos
+
+*/
 const MemoComp = (props) =>{
     console.log("memo component rendered");
     return(
