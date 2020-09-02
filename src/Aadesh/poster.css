@@ -1,0 +1,13 @@
+.card{
+    min-width:33.3%;
+    min-height:400px;
+    flex-direction: column;
+    border:2px solid black;
+    float: left;
+    text-align: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.mainPage{
+    text-align: center;
+}

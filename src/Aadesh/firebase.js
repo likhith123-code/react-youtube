@@ -17,5 +17,5 @@ var firebaseConfig = {
 
   export const auth=firebase.auth;
   const db=firebase.firestore;
-
+ 
   export default firebase;
