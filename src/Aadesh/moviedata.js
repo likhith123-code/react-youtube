@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import firebase,{auth} from './firebase'
 import classes from './poster.css'
-import Poster from './poster';
+import Poster from './poster'
+
+
 const db=firebase.firestore();
 class MovieData extends Component{
     state={
-        click:null,
+        click:null, 
         prime:null,
         netflix:null,
         hotstar:null
@@ -62,8 +64,8 @@ class MovieData extends Component{
        )
     }
     render(){
-        let movies=null;
-       if(this.state.click==="prime"){
+       let movies=null;
+       if(this.state.click==="Prime"){
            movies= (
                <div>
                    {this.state.prime.map((data)=>
@@ -73,7 +75,7 @@ class MovieData extends Component{
                </div>
            )
        }
-       if(this.state.click==="netflix"){
+       if(this.state.click==="Netflix"){
         movies= (
             <div>
                 {this.state.netflix.map((data)=>
@@ -84,7 +86,7 @@ class MovieData extends Component{
             </div>
         )
     }
-    if(this.state.click==="hotstar"){
+    if(this.state.click==="Hotstar"){
         movies= (
             <div>
                 {this.state.hotstar.map((data)=>
@@ -94,17 +96,24 @@ class MovieData extends Component{
             </div>
         )
     } 
+
         return(
             <div>
-                <h1>Stream It - Best Page for streaming online movies</h1>
+                <h1 className={classes.header}>
+                Stream It 
+                </h1>
                 <hr/>
-                <div>
-                <button onClick={()=>{this.datalist("prime")}}>Amazon Prime Movies</button>
-                <button onClick={()=>{this.datalist("netflix")}}>Netlfix Movies</button>
-                <button onClick={()=>{this.datalist("hotstar")}}>Hotstar Movies</button>
+                <div className={classes.buttonclass}>
+                <button className={classes.button} onClick={()=>{this.datalist("Prime")}}>Amazon Prime Movies</button>{' '}
+                <button className={classes.button} onClick={()=>{this.datalist("Netflix")}}>Netflix Movies</button>{' '}
+                <button className={classes.button} onClick={()=>{this.datalist("Hotstar")}}>Hotstar Movies</button>{' '}
                 </div>
                 <hr/>
-                <h2>{this.state.click} Movies List</h2>
+                <h2>
+                    <span><img src="https://image.flaticon.com/icons/svg/2919/2919572.svg" width="40px" height="70px" /></span>
+                    <span className={classes.header2}> {this.state.click} Movies List  </span>
+                   
+                </h2>
                 <div className={classes.mainPage}>
                    {movies}
                 </div>

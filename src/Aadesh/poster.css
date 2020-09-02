@@ -1,13 +1,50 @@
 .card{
-    min-width:33.3%;
-    min-height:400px;
+    width:33.3%;
+    height: max-content;
     flex-direction: column;
     border:2px solid black;
     float: left;
     text-align: center;
     align-items: center;
     box-sizing: border-box;
+    padding-top: 5px;
+    background-color:whitesmoke;
+}
+.buttonclass{
+    margin:3px;
 }
 .mainPage{
     text-align: center;
 }
+.header{
+    background-color: black;
+    height:max-content;
+    color:azure;
+}
+.header2{
+    height:60px;
+    color:cadetblue;
+}
+.button{
+    border-radius: 8px;
+    color:cornsilk;
+    background-color:darkslategrey;
+}
+
+@media only screen and (min-width: 320px) {
+   .card{
+       width:100%;
+   }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .card{
+        width:50%;
+    }
+   }
+
+   @media only screen and (min-width: 992px) {
+    .card{
+        width:33.3%;
+    }
+   }
