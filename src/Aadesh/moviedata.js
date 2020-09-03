@@ -12,7 +12,8 @@ class MovieData extends Component{
         netflix:null,
         hotstar:null,
         recent:null,
-        webseries:null
+        webseries:null,
+        other:null
 
     }
     componentDidMount(){
@@ -87,6 +88,20 @@ class MovieData extends Component{
                 })
             })
             .catch(err=>console.log(err))
+        db.collection("other")
+            .get()
+            .then(snapshot=>{
+                const others_data=[]
+                snapshot.forEach(doc => {
+                    const data=doc.data()
+                    others_data.push(data)
+                    
+                });
+                this.setState({
+                    other:others_data
+                })
+            })
+            .catch(err=>console.log(err))
     }
     datalist = (name)=>{
        this.setState(
@@ -100,7 +115,7 @@ class MovieData extends Component{
                <div>
                    {this.state.prime.map((data)=>
                       <Poster name={data.moviename} starring={data.starring} image={data.image} language={data.language} 
-                      genre={data.Genre} />
+                      genre={data.Genre}    link={data.link} />
                    )}
                </div>
            )
@@ -111,7 +126,8 @@ class MovieData extends Component{
                 {this.state.netflix.map((data)=>
                     <Poster name={data.moviename} starring={data.starring}
                      image={data.image} language={data.language}
-                     genre={data.Genre} />
+                     genre={data.Genre}
+                     link={data.link} />
                 )}
             </div>
         )
@@ -121,7 +137,17 @@ class MovieData extends Component{
             <div>
                 {this.state.hotstar.map((data)=>
                     <Poster name={data.moviename} starring={data.starring} image={data.image} language={data.language} 
-                     genre={data.Genre} />
+                     genre={data.Genre}    link={data.link} />
+                )}
+            </div>
+        )
+    } 
+    if(this.state.click==="Other Movies"){
+        movies= (
+            <div>
+                {this.state.other.map((data)=>
+                    <Poster name={data.moviename} starring={data.starring} image={data.image} language={data.language} 
+                     genre={data.Genre}   link={data.link}  />
                 )}
             </div>
         )
@@ -131,7 +157,7 @@ class MovieData extends Component{
             <div>
                 {this.state.recent.map((data)=>
                     <Poster name={data.moviename} starring={data.starring} image={data.image} language={data.language} 
-                     genre={data.Genre} />
+                     genre={data.Genre}    link={data.link} />
                 )}
             </div>
         )
@@ -141,7 +167,7 @@ class MovieData extends Component{
             <div>
                 {this.state.webseries.map((data)=>
                     <Poster name={data.moviename} starring={data.starring} image={data.image} language={data.language} 
-                     genre={data.Genre} />
+                     genre={data.Genre}   link={data.link}  />
                 )}
             </div>
         )
@@ -159,11 +185,11 @@ class MovieData extends Component{
                 <button className={classes.button} onClick={()=>{this.datalist("Netflix Movies")}}>Netflix Movies</button>
                 <button className={classes.button} onClick={()=>{this.datalist("Hotstar Movies")}}>Hotstar Movies</button>
                 <button className={classes.button} onClick={()=>{this.datalist("Web Series")}}>Web Series</button>
-                
+                <button className={classes.button} onClick={()=>{this.datalist("Other Movies")}}>Others</button>
                 </div>
                 <hr/>
                 <div>
-                    <span className={classes.moviehead}>Download our App to Stream Movies. Click Here {'  '}</span>
+                    <span className={classes.moviehead}>Download our App to Stream Movies. Click Here to Download </span>
                     <br/>
                     <button className={classes.link}><a href="https://i.diawi.com/eyB2KE" target="_blank "><span><img src="https://image.flaticon.com/icons/svg/892/892634.svg" width="30px" height="40px"/></span>Download Now</a></button>
                   

@@ -13,6 +13,7 @@ const Poster = (props) =>{
             <p>Language : {props.language}</p>
             <p>Starring : {props.starring}</p>
             <p>Genre : {props.genre}</p>
+            <button className={classes.posterbutton}><a href={props.link} target="_blank">Watch Trailer Now</a></button>
            </div>
         </div>
     </>
