@@ -1,17 +1,40 @@
 .card{
     width:33.3%;
-    height: max-content;
+    height:max-content;
     flex-direction: column;
     border:2px solid black;
+    display: flex;
+    flex-wrap: wrap;
     float: left;
     text-align: center;
+    margin-bottom:10px;
     align-items: center;
     box-sizing: border-box;
-    padding-top: 5px;
-    background-color:whitesmoke;
+    padding:1rem;
+    border-radius: 10px;
+    background-color: #001b52;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+    box-shadow:0 20px 40px -14px rgba(0,0,0,0.25);
+
+}
+.card_title{
+    color:#ffffff;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-weight: 700;
 }
 .posterbutton{
     margin-bottom:10px;
+    color:#ffffff;
+    padding:0.8rem;
+    font-size:14px;
+    text-transform: uppercase;
+    border-radius:4px;
+    display:block;
+    width:100%;
+    cursor:pointer;
+    border:1px solid rgba(255,255,255,0.3);
+    background-color:darkslategray;
 }
 .buttonclass{
     margin:3px;

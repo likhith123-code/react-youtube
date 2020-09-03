@@ -13,7 +13,8 @@ class MovieData extends Component{
         hotstar:null,
         recent:null,
         webseries:null,
-        other:null
+        other:null,
+        applink:null
 
     }
     componentDidMount(){
@@ -109,7 +110,8 @@ class MovieData extends Component{
        )
     }
     render(){
-       let movies=null;
+      let movies=null;
+
        if(this.state.click==="Prime Movies"){
            movies= (
                <div>
@@ -172,12 +174,17 @@ class MovieData extends Component{
             </div>
         )
     } 
+    
 
         return(
             <div>
-                <h1 className={classes.header}>
-                Stream It 
+                <div  className={classes.header}>
+                <h1>
+                Stream It
                 </h1>
+                <span>{'         '} <img src="https://img.icons8.com/office/2x/gmail-login.png" width="30px" height="30px" /> Contact Us : streamitfree247@gmail.com</span>
+
+                </div>
                 <hr/>
                 <div className={classes.buttonclass}>
                 <button className={classes.button} onClick={()=>{this.datalist("Recently Added Movies")}}>Recently Added</button>
@@ -189,9 +196,9 @@ class MovieData extends Component{
                 </div>
                 <hr/>
                 <div>
-                    <span className={classes.moviehead}>Download our App to Stream Movies. Click Here to Download </span>
+                    <span className={classes.moviehead}>Download our App to stream Movies online. Click Here to Download </span>
                     <br/>
-                    <button className={classes.link}><a href="https://i.diawi.com/eyB2KE" target="_blank "><span><img src="https://image.flaticon.com/icons/svg/892/892634.svg" width="30px" height="40px"/></span>Download Now</a></button>
+                    <button className={classes.link} ><a href="https://i.diawi.com/eyB2KE" target="_blank "><span><img src="https://image.flaticon.com/icons/svg/892/892634.svg" width="30px" height="40px"/></span>Download Now</a></button>
                   
                 </div>
                 <hr/>
@@ -203,7 +210,7 @@ class MovieData extends Component{
                    
                 </h2>
                 <div className={classes.mainPage}>
-                   {movies}
+                    {movies}
                 </div>
             </div>
         )

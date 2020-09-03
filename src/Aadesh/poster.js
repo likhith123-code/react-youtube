@@ -6,10 +6,10 @@ const Poster = (props) =>{
     <>
         <div className={classes.card}>
            <div>
-            <img src={props.image} width="300px" height="300px" />
+            <img src={props.image} width="200px" height="200px" />
            </div>
            <div>
-            <h4>Movie Name : {props.name}</h4>
+            <h4 className={classes.cardTitle}>Movie Name : {props.name}</h4>
             <p>Language : {props.language}</p>
             <p>Starring : {props.starring}</p>
             <p>Genre : {props.genre}</p>
