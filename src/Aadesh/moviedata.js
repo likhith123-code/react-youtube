@@ -14,7 +14,10 @@ class MovieData extends Component{
         recent:null,
         webseries:null,
         other:null,
-        applink:null
+        applink:null,
+        formdata:'',
+        suggest:'',
+        language:''
 
     }
     componentDidMount(){
@@ -109,6 +112,33 @@ class MovieData extends Component{
            {click:name}
        )
     }
+    movietitle = (event)=>{
+        this.setState({
+            suggest:event.target.value
+        })
+    }
+    movielanguage=(event)=>{
+        this.setState({
+            language:event.target.value
+        })
+    }
+    submitdata = () =>{
+        
+        this.setState({
+            formdata:"Movie Will Be Added Soon :)"
+        })
+        db.collection('suggestions')
+        .add({
+            moviename:this.state.suggest,
+            language:this.state.language
+        })
+        .catch(er=>console.log(er));
+        this.setState({
+            language:' ',
+            suggest:' '
+        })
+        
+    }
     render(){
       let movies=null;
 
@@ -177,13 +207,16 @@ class MovieData extends Component{
     
 
         return(
-            <div>
+            <div className={classes.mainPage}>
                 <div  className={classes.header}>
                 <h1>
                 Stream It
                 </h1>
                 <span>{'         '} <img src="https://img.icons8.com/office/2x/gmail-login.png" width="30px" height="30px" /> Contact Us : streamitfree247@gmail.com</span>
-
+                <hr/>
+                <h4>
+                See Available Movies By Clicking Below
+                </h4>
                 </div>
                 <hr/>
                 <div className={classes.buttonclass}>
@@ -201,15 +234,17 @@ class MovieData extends Component{
                     <button className={classes.link} ><a href="https://i.diawi.com/eyB2KE" target="_blank "><span><img src="https://image.flaticon.com/icons/svg/892/892634.svg" width="30px" height="40px"/></span>Download Now</a></button>
                   
                 </div>
+                <div>
+                        <label className={classes.label}>Movie Suggestion : </label>
+                        <input onChange={this.movietitle} type="text" placeholder="Enter Movie Name" value={this.state.suggest}/>{' '}
+                        <label className={classes.label}>Language : </label>
+                        <input onChange={this.movielanguage} type="text" placeholder="Enter Langauge" value={this.state.language}/>
+                        
+                        <button onClick={this.submitdata} className={classes.button}>Submit</button>
+                    <div className={classes.message}>{this.state.formdata}</div>
+                </div>
                 <hr/>
-                <h2>
-                    <span><img src="https://image.flaticon.com/icons/svg/2919/2919572.svg" width="40px" height="70px" /></span>
-                    <span className={classes.header2}> Available Movies List
-                    
-                     </span>
-                   
-                </h2>
-                <div className={classes.mainPage}>
+                <div className={classes.mainpage}>
                     {movies}
                 </div>
             </div>

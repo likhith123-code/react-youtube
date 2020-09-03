@@ -5,14 +5,12 @@ const Poster = (props) =>{
     return(
     <>
         <div className={classes.card}>
-           <div>
-            <img src={props.image} width="200px" height="200px" />
-           </div>
-           <div>
-            <h4 className={classes.cardTitle}>Movie Name : {props.name}</h4>
-            <p>Language : {props.language}</p>
-            <p>Starring : {props.starring}</p>
-            <p>Genre : {props.genre}</p>
+           <img src={props.image} width="200px" height="200px" />
+           <div className={classes.cardbody}>
+            <p className={classes.movienames}>Movie Name : {props.name}</p>
+            <p className={classes.texts}>Language : {props.language}</p>
+            <p className={classes.texts}>Starring : {props.starring}</p>
+            <p className={classes.texts}>Genre : {props.genre}</p>
             <button className={classes.posterbutton}><a href={props.link} target="_blank">Watch Trailer Now</a></button>
            </div>
         </div>
