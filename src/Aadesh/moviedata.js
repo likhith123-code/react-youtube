@@ -105,6 +105,14 @@ class MovieData extends Component{
                 })
             })
             .catch(err=>console.log(err))
+            movies= (
+                <div>
+                    {this.state.recent.map((data)=>
+                        <Poster name={data.moviename} starring={data.starring} image={data.image} language={data.language} 
+                         genre={data.Genre}    link={data.link} />
+                    )}
+                </div>
+            )
     }
     datalist = (name)=>{
        this.setState(
