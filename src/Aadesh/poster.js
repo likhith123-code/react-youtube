@@ -3,7 +3,7 @@ import classes from './poster.css'
 
 const Poster = (props) =>{
     return(
-    <>
+        <>
         <div className={classes.card}>
            <img src={props.image} width="200px" height="200px" />
            <div className={classes.cardbody}>
@@ -14,7 +14,7 @@ const Poster = (props) =>{
             <button className={classes.posterbutton}><a href={props.link} target="_blank">Watch Trailer Now</a></button>
            </div>
         </div>
-    </>
+        </>
     )
 }
 

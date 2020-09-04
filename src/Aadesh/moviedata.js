@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import firebase,{auth} from './firebase'
 import classes from './poster.css'
 import Poster from './poster'
+import Default from './default';
 
 
 const db=firebase.firestore();
 class MovieData extends Component{
     state={
-        click:null, 
+        click:null,
+        default:null, 
         prime:null,
         netflix:null,
         hotstar:null,
@@ -105,24 +107,7 @@ class MovieData extends Component{
                 })
             })
             .catch(err=>console.log(err))
-           
-
-
-
-            
-            movies= (
-                <div>
-                    {this.state.recent.map((data)=>
-                        <Poster name={data.moviename} starring={data.starring} image={data.image} language={data.language} 
-                         genre={data.Genre}    link={data.link} />
-                    )}
-                </div>
-            )
-
-
-
-
-
+   
     }
     datalist = (name)=>{
        this.setState(
@@ -157,14 +142,14 @@ class MovieData extends Component{
         
     }
     render(){
-      let movies=null;
-        if(this.state.click==null)
-        {
-            movies=(
-            <div className={classes.before}>
-                 Movies Will Be Displayed Here
-            </div>)
-        }
+       let movies=null;
+       if(this.state.click==null){
+          movies=(
+              <div>
+                 <Default />
+              </div>
+          )
+       }
        if(this.state.click==="Prime Movies"){
            movies= (
                <div>
@@ -233,21 +218,25 @@ class MovieData extends Component{
             <div className={classes.mainPage}>
                 <div  className={classes.header}>
                 <h1>
-                Stream It
+                <img src="https://image.flaticon.com/icons/svg/860/860539.svg" width="50px" height="50px"/>{'  '}Stream It
                 </h1>
                 <span className={classes.contactus}>{'         '} <img src="https://img.icons8.com/office/2x/gmail-login.png" width="15px" height="15px" /> Contact Us : streamitfree247@gmail.com</span>
                 <hr/>
-                <h5>
+                </div>
+                <div>
+                <h5 className={classes.header3}>
                 See Available Movies By Clicking Below
                 </h5>
+               
                 </div>
+            
                 <hr/>
-                <div className={classes.buttonclass}>
-                <button className={classes.button} onClick={()=>{this.datalist("Recently Added Movies")}}>Recently Added</button>
-                <button className={classes.button} onClick={()=>{this.datalist("Prime Movies")}}>Amazon Prime Movies</button>
+             <div className={classes.buttonclass}>
                 <button className={classes.button} onClick={()=>{this.datalist("Netflix Movies")}}>Netflix Movies</button>
+                <button className={classes.button} onClick={()=>{this.datalist("Prime Movies")}}>Amazon Prime Movies</button>
                 <button className={classes.button} onClick={()=>{this.datalist("Hotstar Movies")}}>Hotstar Movies</button>
                 <button className={classes.button} onClick={()=>{this.datalist("Web Series")}}>Web Series</button>
+                <button className={classes.button} onClick={()=>{this.datalist("Recently Added Movies")}}>Recently Added</button>
                 <button className={classes.button} onClick={()=>{this.datalist("Other Movies")}}>Others</button>
                 </div>
                 <hr/>
