@@ -15,7 +15,6 @@ class MovieData extends Component{
         webseries:null,
         other:null,
         applink:null,
-        formdata:'',
         suggest:'',
         language:''
 
@@ -124,9 +123,7 @@ class MovieData extends Component{
     }
     submitdata = () =>{
         
-        this.setState({
-            formdata:"Movie Will Be Added Soon :)"
-        })
+        alert("Movie Will be Added Soon :)");
         db.collection('suggestions')
         .add({
             moviename:this.state.suggest,
@@ -137,6 +134,7 @@ class MovieData extends Component{
             language:' ',
             suggest:' '
         })
+       
         
     }
     render(){
@@ -241,7 +239,6 @@ class MovieData extends Component{
                         <input onChange={this.movielanguage} type="text" placeholder="Enter Langauge" value={this.state.language}/>
                         
                         <button onClick={this.submitdata} className={classes.button}>Submit</button>
-                    <div className={classes.message}>{this.state.formdata}</div>
                 </div>
                 <hr/>
                 <div className={classes.mainpage}>
