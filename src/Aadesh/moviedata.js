@@ -121,7 +121,7 @@ class MovieData extends Component{
             language:event.target.value
         })
     }
-    submitdata = () =>{
+    submitdata = (e) =>{
         
         alert("Movie Will be Added Soon :)");
         db.collection('suggestions')
@@ -134,6 +134,7 @@ class MovieData extends Component{
             language:' ',
             suggest:' '
         })
+        e.preventDefault();
        
         
     }
@@ -233,12 +234,16 @@ class MovieData extends Component{
                   
                 </div>
                 <div>
+                     <form onSubmit={this.submitdata}>
+
+                    
                         <label className={classes.label}>Movie Suggestion : </label>
-                        <input onChange={this.movietitle} type="text" placeholder="Enter Movie Name" value={this.state.suggest}/>{' '}
+                        <input onChange={this.movietitle} type="text"  placeholder="Enter Movie Name" value={this.state.suggest} required/>{' '}
                         <label className={classes.label}>Language : </label>
-                        <input onChange={this.movielanguage} type="text" placeholder="Enter Langauge" value={this.state.language}/>
+                        <input onChange={this.movielanguage} type="text" placeholder="Enter Langauge" value={this.state.language} required />
                         
-                        <button onClick={this.submitdata} className={classes.button}>Submit</button>
+                        <button type="submit" className={classes.button}>Submit</button>
+                    </form>
                 </div>
                 <hr/>
                 <div className={classes.mainpage}>
