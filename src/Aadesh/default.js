@@ -5,7 +5,7 @@ const Default = (props)=>{
     return(
         <>
         <div className={classes.default}>
-            <marquee><h1>Movies will be displayed here</h1></marquee>
+            <h1>Movies will be displayed here</h1>
         </div>
         </>
         )

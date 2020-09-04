@@ -4,6 +4,7 @@
     flex-direction: column;
     border:2px solid black;
     display: inline-flex;
+    border-color:white;
     flex-wrap: wrap;
     float: left;
     text-align: center;
@@ -13,8 +14,8 @@
     box-sizing: border-box;
     padding:1rem;
     border-radius: 10px;
-    background-color: #001b52;
-    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    background-color: #041a17;
+    background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
     box-shadow:0 20px 40px -14px rgba(0,0,0,0.25);
 
 }
@@ -64,7 +65,7 @@
 }
 .posterbutton{
     margin-bottom:10px;
-    color:#ffffff;
+    color:black;
     padding:0.8rem;
     font-size:14px;
     text-transform: uppercase;
@@ -73,11 +74,13 @@
     width:100%;
     cursor:pointer;
     border:1px solid rgba(255,255,255,0.3);
-    background-color:darkslategray;
+    background-color:white;
+    border-color:black;
+    font-weight: 600;
 }
 .buttonclass{
     margin:3px;
-    background-color:rgba(85, 141, 114, 0.459);
+    background-color:whitesmoke;
     padding:20px;
 }
 .cardbody{
@@ -110,12 +113,17 @@
 }
 .button{
     border-radius: 8px;
-    color:white;
-    border-color: #ffffff;
+    color:black;
+    font-weight: 400;
+    border-color:darkblue;
     width:max-content;
     box-shadow: 5px 10px black;
-    background-color:darkblue;
+    background-color:cornflowerblue;
     margin:5px;
+}
+.button2{
+    border-radius: 8px;
+    margin-left: 4px;
 }
 .button:hover{
     background-color:chocolate;
@@ -127,6 +135,9 @@
 }
 .link{
   margin:10px;
+  background-color:white;
+  border-color: black;
+  border-radius: 12px;
 }
 
 @media only screen and (min-width: 320px) {

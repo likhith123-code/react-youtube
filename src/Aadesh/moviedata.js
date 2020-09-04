@@ -255,7 +255,7 @@ class MovieData extends Component{
                         <label className={classes.label}>Language : </label>
                         <input onChange={this.movielanguage} type="text" placeholder="Enter Langauge" value={this.state.language} required />
                         
-                        <button type="submit" className={classes.button}>Submit</button>
+                        <button type="submit" className={classes.button2}>Submit</button>
                     </form>
                 </div>
                 <hr/>
