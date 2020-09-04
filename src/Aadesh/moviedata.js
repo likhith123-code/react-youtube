@@ -237,7 +237,7 @@ class MovieData extends Component{
                      <form onSubmit={this.submitdata}>
 
                     
-                        <label className={classes.label}>Movie Suggestion : </label>
+                        <label className={classes.label}>Movie Request : </label>
                         <input onChange={this.movietitle} type="text"  placeholder="Enter Movie Name" value={this.state.suggest} required/>{' '}
                         <label className={classes.label}>Language : </label>
                         <input onChange={this.movielanguage} type="text" placeholder="Enter Langauge" value={this.state.language} required />
