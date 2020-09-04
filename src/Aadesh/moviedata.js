@@ -105,6 +105,11 @@ class MovieData extends Component{
                 })
             })
             .catch(err=>console.log(err))
+           
+
+
+
+            
             movies= (
                 <div>
                     {this.state.recent.map((data)=>
@@ -113,6 +118,11 @@ class MovieData extends Component{
                     )}
                 </div>
             )
+
+
+
+
+
     }
     datalist = (name)=>{
        this.setState(
