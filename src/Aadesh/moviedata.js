@@ -140,7 +140,13 @@ class MovieData extends Component{
     }
     render(){
       let movies=null;
-
+        if(this.state.click==null)
+        {
+            movies=(
+            <div className={classes.before}>
+                 Movies Will Be Displayed Here
+            </div>)
+        }
        if(this.state.click==="Prime Movies"){
            movies= (
                <div>
