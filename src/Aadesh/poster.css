@@ -62,7 +62,10 @@
 .header{
     background-color: black;
     height:max-content;
-    color:bisque
+    color:bisque;
+}
+.contactus{
+    font-size: smaller;
 }
 .header2{
     height:60px;

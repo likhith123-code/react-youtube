@@ -212,11 +212,11 @@ class MovieData extends Component{
                 <h1>
                 Stream It
                 </h1>
-                <span>{'         '} <img src="https://img.icons8.com/office/2x/gmail-login.png" width="30px" height="30px" /> Contact Us : streamitfree247@gmail.com</span>
+                <span className={classes.contactus}>{'         '} <img src="https://img.icons8.com/office/2x/gmail-login.png" width="15px" height="15px" /> Contact Us : streamitfree247@gmail.com</span>
                 <hr/>
-                <h4>
+                <h5>
                 See Available Movies By Clicking Below
-                </h4>
+                </h5>
                 </div>
                 <hr/>
                 <div className={classes.buttonclass}>
@@ -231,7 +231,7 @@ class MovieData extends Component{
                 <div>
                     <span className={classes.moviehead}>Download our App to stream Movies online. Click Here to Download </span>
                     <br/>
-                    <button className={classes.link} ><a href="https://i.diawi.com/eyB2KE" target="_blank "><span><img src="https://image.flaticon.com/icons/svg/892/892634.svg" width="30px" height="40px"/></span>Download Now</a></button>
+                    <button className={classes.link} ><a href="https://i.diawi.com/xnQdgF" target="_blank "><span><img src="https://image.flaticon.com/icons/svg/892/892634.svg" width="30px" height="40px"/></span>Download Now</a></button>
                   
                 </div>
                 <div>
