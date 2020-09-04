@@ -236,7 +236,7 @@ class MovieData extends Component{
                 <div>
                     <span className={classes.moviehead}>Download our App to stream Movies online. Click Here to Download </span>
                     <br/>
-                    <button className={classes.link} ><a href="https://i.diawi.com/xnQdgF" target="_blank "><span><img src="https://image.flaticon.com/icons/svg/892/892634.svg" width="30px" height="40px"/></span>Download Now</a></button>
+                    <button className={classes.link} ><a href="https://i.diawi.com/UyQCcB" target="_blank "><span><img src="https://image.flaticon.com/icons/svg/892/892634.svg" width="30px" height="40px"/></span>Download Now</a></button>
                   
                 </div>
                 <div>
