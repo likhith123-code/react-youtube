@@ -217,7 +217,7 @@ class MovieData extends Component{
                 </div>
                 <div>
                 <h5 className={classes.header3}>
-                See Available Movies By Clicking Below
+                See Available Movies By Clicking Below<img src="https://image.flaticon.com/icons/svg/1093/1093413.svg" width="40px" height="40px"  />
                 </h5>
                
                 </div>
