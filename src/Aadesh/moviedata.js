@@ -233,7 +233,7 @@ class MovieData extends Component{
                 </div>
                 <hr/>
                 <div>
-                    <span className={classes.moviehead}>Download our App to stream Movies online. Click Here to Download </span>
+                    <span className={classes.moviehead}>Download our App to Watch Movies online.</span>
                     <br/>
                     <button className={classes.link} ><a href="http://www.mediafire.com/file/s8hzk8srmjpnhoc/app-debug.apk/file" target="_blank "><span><img src="https://image.flaticon.com/icons/svg/892/892634.svg" width="30px" height="40px"/></span>Download Now</a></button>
                   
