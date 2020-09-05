@@ -154,8 +154,7 @@ class MovieData extends Component{
            movies= (
                <div>
                    {this.state.prime.map((data)=>
-                      <Poster name={data.moviename} starring={data.starring} image={data.image} language={data.language} 
-                      genre={data.Genre}    link={data.link} />
+                      <Poster name={data.moviename} image={data.image} language={data.language} />
                    )}
                </div>
            )
@@ -164,10 +163,7 @@ class MovieData extends Component{
         movies= (
             <div>
                 {this.state.netflix.map((data)=>
-                    <Poster name={data.moviename} starring={data.starring}
-                     image={data.image} language={data.language}
-                     genre={data.Genre}
-                     link={data.link} />
+                    <Poster name={data.moviename} image={data.image} language={data.language}/>
                 )}
             </div>
         )
@@ -176,8 +172,7 @@ class MovieData extends Component{
         movies= (
             <div>
                 {this.state.hotstar.map((data)=>
-                    <Poster name={data.moviename} starring={data.starring} image={data.image} language={data.language} 
-                     genre={data.Genre}    link={data.link} />
+                    <Poster name={data.moviename} image={data.image} language={data.language} />
                 )}
             </div>
         )
@@ -186,8 +181,7 @@ class MovieData extends Component{
         movies= (
             <div>
                 {this.state.other.map((data)=>
-                    <Poster name={data.moviename} starring={data.starring} image={data.image} language={data.language} 
-                     genre={data.Genre}   link={data.link}  />
+                    <Poster name={data.moviename} image={data.image} language={data.language} />
                 )}
             </div>
         )
@@ -196,8 +190,7 @@ class MovieData extends Component{
         movies= (
             <div>
                 {this.state.recent.map((data)=>
-                    <Poster name={data.moviename} starring={data.starring} image={data.image} language={data.language} 
-                     genre={data.Genre}    link={data.link} />
+                    <Poster name={data.moviename} image={data.image} language={data.language}/>
                 )}
             </div>
         )
@@ -206,8 +199,7 @@ class MovieData extends Component{
         movies= (
             <div>
                 {this.state.webseries.map((data)=>
-                    <Poster name={data.moviename} starring={data.starring} image={data.image} language={data.language} 
-                     genre={data.Genre}   link={data.link}  />
+                    <Poster name={data.moviename} image={data.image} language={data.language} />
                 )}
             </div>
         )

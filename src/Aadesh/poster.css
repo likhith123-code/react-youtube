@@ -1,23 +1,26 @@
 .card{
-    width:33.3%;
-    height:fit-content;
+    width:25%;
     flex-direction: column;
     border:2px solid black;
     display: inline-flex;
-    border-color:white;
+    border-color:black;
     flex-wrap: wrap;
     float: left;
+    height: 420px;
     text-align: center;
     margin-bottom:10px;
     margin-top:10px;
     align-items: center;
     box-sizing: border-box;
-    padding:1rem;
     border-radius: 10px;
-    background-color: #041a17;
-    background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+    
     box-shadow:0 20px 40px -14px rgba(0,0,0,0.25);
 
+}
+.languagename{
+    color:black;
+    font-size: large;
+    font-weight: 500;
 }
 .default{
     width:100%;
@@ -53,10 +56,14 @@
     color:white;
 }
 .movienames{
-    color:gold;
+    color:black;
     letter-spacing: 0.4px;
     text-transform: capitalize;
     font-weight: 700;
+    background-color: grey;
+    width: 100%;
+    margin-bottom:5px;
+    padding:10px;
 }
 .before{
     margin-top:30px;
@@ -79,7 +86,7 @@
     font-weight: 600;
 }
 .buttonclass{
-    margin:3px;
+    margin:10px;
     background-color:whitesmoke;
     padding:20px;
 }
@@ -141,8 +148,13 @@
 }
 
 @media only screen and (min-width: 320px) {
+    .card{
+        width:100%;
+    }
+   }
+@media only screen and (min-width: 576px) {
    .card{
-       width:100%;
+       width:50%;
    }
   }
 
@@ -154,6 +166,6 @@
 
    @media only screen and (min-width: 992px) {
     .card{
-        width:33.3%;
+        width:25%;
     }
    }
