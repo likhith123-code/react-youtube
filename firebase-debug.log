@@ -1,0 +1,44 @@
+[debug] [2020-09-05T06:10:46.441Z] ----------------------------------------------------------------------
+[debug] [2020-09-05T06:10:46.443Z] Command:       C:\Program Files (x86)\nodejs\node.exe C:\Users\Likhith\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-09-05T06:10:46.443Z] CLI Version:   8.10.0
+[debug] [2020-09-05T06:10:46.443Z] Platform:      win32
+[debug] [2020-09-05T06:10:46.443Z] Node Version:  v12.18.3
+[debug] [2020-09-05T06:10:46.445Z] Time:          Sat Sep 05 2020 11:40:46 GMT+0530 (India Standard Time)
+[debug] [2020-09-05T06:10:46.445Z] ----------------------------------------------------------------------
+[debug] [2020-09-05T06:10:46.445Z] 
+[debug] [2020-09-05T06:10:46.513Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-09-05T06:10:46.513Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\web-dev\reactapps\utube-react
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[debug] [2020-09-05T06:10:48.084Z] Error: EBUSY: resource busy or locked, rename 'C:\Users\Likhith\.config\configstore\firebase-tools.json.2543229365' -> 'C:\Users\Likhith\.config\configstore\firebase-tools.json'
+    at Object.renameSync (fs.js:741:3)
+    at Function.writeFileSync [as sync] (C:\Users\Likhith\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\write-file-atomic\index.js:244:8)
+    at Configstore.set all [as all] (C:\Users\Likhith\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\configstore\index.js:61:20)
+    at Configstore.set (C:\Users\Likhith\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\configstore\index.js:91:12)
+    at Request._callback (C:\Users\Likhith\AppData\Roaming\npm\node_modules\firebase-tools\lib\fetchMOTD.js:41:39)
+    at Request.self.callback (C:\Users\Likhith\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:315:20)
+    at Request.EventEmitter.emit (domain.js:483:12)
+    at Request.<anonymous> (C:\Users\Likhith\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:315:20)
+    at Request.EventEmitter.emit (domain.js:483:12)
+    at IncomingMessage.<anonymous> (C:\Users\Likhith\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:421:28)
+    at IncomingMessage.emit (events.js:327:22)
+    at IncomingMessage.EventEmitter.emit (domain.js:483:12)
+    at endReadableNT (_stream_readable.js:1220:12)
+[error] 
+[error] Error: An unexpected error has occurred.
